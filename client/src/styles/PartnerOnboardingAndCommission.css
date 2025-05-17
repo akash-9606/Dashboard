@@ -1,0 +1,229 @@
+/* PartnerOnboardingAndCommission.css */
+
+.poa-dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+}
+
+.poa-main-content {
+  flex: 1;
+  padding: 30px;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3.poa-partners-heading {
+  margin-top: 40px;
+  color: #333;
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+}
+
+.poa-form {
+  max-width: 600px;
+  width: 100%;
+  background-color: #fafafa;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.poa-form div {
+  margin-bottom: 15px;
+}
+
+.poa-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #555;
+}
+
+.poa-input-text,
+.poa-input-number {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: border 0.3s;
+}
+
+.poa-input-text:focus,
+.poa-input-number:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.poa-submit-btn {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.poa-submit-btn:hover {
+  background-color: #005bb5;
+}
+
+.poa-error {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #e53935;
+}
+
+.poa-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.poa-table th,
+.poa-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.poa-table th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+  color: #333;
+}
+
+.poa-table td {
+  color: #444;
+}
+
+/* Edit and Delete buttons - same size and styling */
+.poa-edit-btn,
+.poa-delete-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  min-width: 100px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.poa-edit-btn {
+  background-color: green;
+}
+
+.poa-edit-btn:hover {
+  background-color: green;
+}
+
+.poa-delete-btn {
+  background-color: red;
+  margin-left: 8px;
+}
+
+.poa-delete-btn:hover {
+  background-color: red;
+}
+
+/* ===================== */
+/* Responsive Styles */
+/* ===================== */
+@media (max-width: 1024px) {
+  .poa-main-content {
+    padding: 25px;
+  }
+
+  .poa-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .poa-dashboard-container {
+    flex-direction: column;
+  }
+
+  .poa-main-content {
+    padding: 20px;
+    border-left: none;
+  }
+
+  .poa-form {
+    padding: 15px;
+  }
+
+  .poa-input-text,
+  .poa-input-number {
+    font-size: 14px;
+  }
+
+  .poa-submit-btn {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Make edit & delete buttons side by side with equal widths */
+  .poa-edit-btn,
+  .poa-delete-btn {
+    width: 48%;
+    padding: 10px 0;
+    min-width: unset;
+    margin-left: 0;
+  }
+
+  .poa-edit-btn+.poa-delete-btn {
+    margin-left: 4%;
+  }
+
+  .poa-table thead {
+    display: none;
+  }
+
+  .poa-table,
+  .poa-table tbody,
+  .poa-table tr,
+  .poa-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .poa-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #fdfdfd;
+  }
+
+  .poa-table td {
+    text-align: right;
+    padding: 10px;
+    position: relative;
+  }
+
+  .poa-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+  }
+}
